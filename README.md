@@ -1,17 +1,21 @@
-# mcp-pkg-go-dev
+# @pipeworx/pkg-go-dev
 
-Go modules MCP — wraps proxy.golang.org
+Go modules MCP — version list + metadata for any importable Go module. No auth.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `list_versions` | List all published versions of a Go module. |
-| `latest_version` | Most recent released version of a Go module — with the resolved time. |
-| `get_module_info` | Metadata for a specific version (resolved version, commit time, origin). |
-| `get_go_mod` | Raw go.mod contents for a specific version. Useful for dependency analysis. |
+- `list_versions(module_path)` — all tagged versions
+- `latest_version(module_path)` — most recent version
+- `get_module_info(module_path, version)` — version metadata
+- `get_go_mod(module_path, version)` — raw go.mod file
+
+## Data source
+
+`https://proxy.golang.org/` — the official Google-run Go module proxy. Returns text/json.
+
+Module paths are import paths (e.g. `github.com/gin-gonic/gin`, `golang.org/x/net`).
 
 ## Quick Start
 
@@ -27,7 +31,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -51,7 +55,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
