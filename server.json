@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/pkg-go-dev",
   "title": "Pkg Go Dev",
   "description": "Go modules MCP — wraps proxy.golang.org",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/pkg-go-dev",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-pkg-go-dev",
