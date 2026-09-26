@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-pkg-go-dev",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Go modules MCP — wraps proxy.golang.org",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-5d3372e89b5accb31565b8fabaeeffcd14257b5ec2b83e26335477f467d938a3",
-    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
+    "sourceHash": "v1-0f7feed0c8127adca5d50a25816822ed783f459cbb74821b1ed34e8094e6eafb",
+    "sourceCommit": "4d51421bd010ad9a322c2245b70b401604912eff"
   }
 }
