@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-pkg-go-dev",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Go modules MCP — wraps proxy.golang.org",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-pkg-go-dev": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "pkg-go-dev"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-pkg-go-dev.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/pkg-go-dev",
   "pipeworx": {
-    "sourceHash": "v1-0f7feed0c8127adca5d50a25816822ed783f459cbb74821b1ed34e8094e6eafb",
-    "sourceCommit": "4d51421bd010ad9a322c2245b70b401604912eff"
+    "mode": "gateway",
+    "slug": "pkg-go-dev",
+    "gatewaySlug": "pkg-go-dev",
+    "sourceHash": "v1-a4ca7bdb1d72a54b900f3d36077b877a2cc5ea81fedde911a4bc30a995cbce37",
+    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
   }
 }

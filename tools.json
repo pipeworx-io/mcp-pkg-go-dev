@@ -1,0 +1,76 @@
+[
+  {
+    "name": "list_versions",
+    "description": "List all published versions of a Go module by its import path (e.g. \"github.com/gin-gonic/gin\") from proxy.golang.org. Returns a sorted array of semver version strings.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "module_path": {
+          "type": "string",
+          "description": "Module import path (e.g. \"github.com/gin-gonic/gin\", \"golang.org/x/net\")"
+        }
+      },
+      "required": [
+        "module_path"
+      ]
+    }
+  },
+  {
+    "name": "latest_version",
+    "description": "Most recent released version of a Go module — with the resolved time.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "module_path": {
+          "type": "string",
+          "description": "Module import path"
+        }
+      },
+      "required": [
+        "module_path"
+      ]
+    }
+  },
+  {
+    "name": "get_module_info",
+    "description": "Metadata for a specific version (resolved version, commit time, origin).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "module_path": {
+          "type": "string",
+          "description": "Module import path"
+        },
+        "version": {
+          "type": "string",
+          "description": "Semver-ish version (e.g. \"v1.9.1\")"
+        }
+      },
+      "required": [
+        "module_path",
+        "version"
+      ]
+    }
+  },
+  {
+    "name": "get_go_mod",
+    "description": "Raw go.mod contents for a specific version. Useful for dependency analysis.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "module_path": {
+          "type": "string",
+          "description": "Module import path"
+        },
+        "version": {
+          "type": "string",
+          "description": "Version"
+        }
+      },
+      "required": [
+        "module_path",
+        "version"
+      ]
+    }
+  }
+]
